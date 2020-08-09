@@ -1,6 +1,8 @@
-# C64 VICE (GTK FOR macOS) Positional Key Map file for Spanish-ISO Macbook (= Small Apple Magic) Keyboards by Ruben Aparicio.
-# This file maps all C64 keys, including Home (F12) and Restore (F11).
-# Set American (us) base layout and load as either Symbolic or Positional Keyboard file at VICE.
+# C64/C128 VICE GTK Positional Key Map file for Compact Spanish-ISO Keyboards (Laptops, Macbooks, Small Apple Magic Keyboards and other compact keyboards).
+# Tested in macOS. Not tested but should work in other VICE GTK distributions. It DOES NOT work in SDL distributions (Check other files in the repository).
+# Keymap File created by Ruben Aparicio (@raparici).
+# This file maps all the C128 keys (therefore all C64 ones too), including Home (F12), Restore (F11), C128 40/80 COLS ( ALT_R+4 or ALT_R+8 ), C128 CAPS ( ALT_R+C ), C128 NO SCROL ( \ or ALT_R+S ), C128 TAB ( | or [ or ALT_R+T ), C128 HELP (F10 or ALT_R+H ), C128 ESC ( € ) and C128 LINE FEED ( @ or ] or ALT_R+F).
+# How to use: Within VICE-GTK Keyboard Settings: Set American (us) base host layout and load this file as either Symbolic or Positional Keyboard file at GTK VICE. 
 
 # VICE keyboard mapping file
 #
@@ -107,8 +109,10 @@ F6 0 6 1
 F7 0 3 8
 F8 0 3 1
 F9 6 6 8                /*		F9 -> Up Arrow			*/
-F12 6 3 8				/*		F10 -> CLR/Home			*/
+F10 8 0 8				/*		F10 -> HELP Key			*/
+trademark 8 0 8			/*		ALT_R+H -> HELP Key		*/
 F11 -3 0				/*		F11 -> RESTORE			*/
+F12 6 3 8				/*		F12 -> CLR/Home			*/
 
 Shift_L 1 7 2
 Shift_R 6 4 4
@@ -138,8 +142,8 @@ period 5 4 8			/* fixed */
 comma 5 7 8				/* fixed */
 semicolon 5 7 8			/*		; -> (SH)+comma	= <		*/	
 colon 5 4 8				/*		: -> (SH)+dot = >		*/	
-greater 6 0 8			/*		> -> (SH)+Pound			*/	
-less 6 0 8				/*		< -> Pound				*/	
+greater 6 0 8			/*		> -> (SH)+Pound			*/
+less 6 0 8				/*		< -> Pound				*/
 apostrophe 5 0 8		/*		' -> +					*/
 question 5 0 8			/* fixed */
 dead_circumflex 5 6 8	/* fixed */
@@ -215,21 +219,51 @@ x 2 7 8
 y 3 1 8
 z 1 4 8
 
-/* NOT USED IN SPANISH ISO SHORT APPLE MAGIC AS DIRECT KEY OR SHIFTED:
-# at 7 3 8
-# bar 6 5 8
-# backslash 6 5 8
-# numbersign 1 0 8
-# braceleft 5 6 8
-# bracketleft 5 6 8
-# braceright 6 1 8
-# bracketright 6 1 8
-# asciicircum 2 3 8
-# Home 6 3 8
-# End 7 1 8
-# Page_Down 6 6 8
-# sterling 6 0 8
-# Insert 6 0 8
-# dead_perispomeni
-# asciitilde 7 1 8
-# grave 7 1 8
+# SPECIAL C128 KEYS: (WE USE ALT_R COMBINATIONS TO MAP THEM). HELP IS IN F10 AND ALT_R+H.
+
+backslash 10 7 8		/*	\ -> C128 NO SCROL				*/
+integral 10 7 8			/*	ALT_R+S -> C128 NO SCROL		*/
+cent -4 0 				/*	ALT_R+4 -> C128 40-80 COLS		*/
+leftdoublequotemark -4 0/*	ALT_R+8 -> C128 40-80 COLS		*/
+bar 8 3 8		 		/* | -> C128 TAB 					*/
+bracketleft 8 3 8 		/* [ -> C128 TAB 					*/
+dagger 8 3 8	 		/* ALT_R+T -> C128 TAB 				*/
+bracketright 9 3 8 		/* ] -> C128 LINE FEED 				*/ 
+at 9 3 8				/* @ -> C128 LINE FEED 				*/
+function 9 3 8			/* ALT_R+F -> C128 LINE FEED 		*/
+copyright -4 1			/*	ALT_R+C -> C128 CAPS 			*/
+EuroSign 9 0 8 			/* C128 ESCAPE 						*/
+aring 10 0 8 			/* Does Nothing, Possible C128 ALT 	*/
+Aring 10 0 8 			/* Does Nothing, Possible C128 ALT 	*/
+
+# C128 SPECIAL KEYS LIST, MAPPED ELSEWHERE IN THIS FILE: (CAPS ARE IN THE VICE BASE TEMPLATE ALREADY)
+# -4 0 	/* C128 40-80 COLS -> IMPLEMENTED AS ALT_R+4 and ALT_R+8		*/
+# -4 1 	/* C128 CAPS -> IMPLEMENTED AS ALT_R+C 							*/
+# 8 0 8 /* C128 HELP -> IMPLEMENTED AS F10 and ALT_R+H 					*/
+# 8 3 8 /* C128 TAB -> IMPLEMENTED AS ALT_R+T and | and [ 				*/
+# 9 0 8 /* C128 ESCAPE -> IMPLEMENTED AS ALT_R+E 						*/
+# 9 3 8 /* C128 LINE FEED -> IMPLEMENTED AS ALT_R+L and @ and ] 		*/
+# 10 0 8 /* Does Nothing, Possible C128 ALT -> IMPLEMENTED AS ALT_R+A 	*/
+# 10 7 8 /*	C128 NO SCROL -> IMPLEMENTED AS \ and ALT_R+S				*/
+
+# C128 REDUNDANT KEYS NOT MAPPED IN THIS KEYMAP AS THEY DONT EXIST IN COMPACT KEYBOARDS AND WE ALREADY GOT THEY WITHIN THE COMPACT KEY SET:
+
+# 8 1 8 /* Numeric KB 8 */
+# 8 2 8 /* Numeric KB 5 */
+# 8 4 8 /* Numeric KB 2 */
+# 8 5 8 /* Numeric KB 4 */
+# 8 6 8 /* Numeric KB 7 */
+# 8 7 8 /* Numeric KB 1 */
+# 9 1 8 /* Numeric KB + */
+# 9 2 8 /* Numeric KB - */
+# 9 4 8 /* Numeric KB INTRO */
+# 9 5 8 /* Numeric KB 6 */
+# 9 6 8 /* Numeric KB 9 */
+# 9 7 8 /* Numeric KB 3 */
+# 10 1 8 /* Numeric KB 0 */
+# 10 2 8 /* Numeric KB . */
+# 10 3 8 /* C128 Specific Cursor Up */
+# 10 4 8 /* C128 Specific Cursor Down */
+# 10 5 8 /* C128 Specific Cursor Left */
+# 10 6 8 /* C128 Specific Cursor Right */
+
