@@ -1,7 +1,7 @@
 # C64/C128 VICE GTK Positional Key Map file for Compact Spanish-ISO Keyboards (Laptops, Macbooks, Small Apple Magic Keyboards and other compact keyboards).
 # Tested in macOS. Not tested but should work in other VICE GTK distributions. It DOES NOT work in SDL distributions (Check other files in the repository).
 # Keymap File created by Ruben Aparicio (@raparici).
-# This file maps all the C128 keys (therefore all C64 ones too), including Home (F12), Restore (F11), C128 40/80 COLS ( ALT_R+4 or ALT_R+8 ), C128 CAPS ( ALT_R+C ), C128 NO SCROL ( \ or ALT_R+S ), C128 TAB ( | or [ or ALT_R+T ), C128 HELP (F10 or ALT_R+H ), C128 ESC ( € ) and C128 LINE FEED ( @ or ] or ALT_R+F).
+# This file maps all the C128 keys (therefore all C64 ones too), including Home (F12), Restore (F11), C128 40/80 COLS ( ALT_R+4 or ALT_R+8 ), C128 CAPS ( ALT_R+C ), C128 NO SCROL ( \ or ALT_R+S ), C128 TAB ( | or [ or ALT_R+T ), C128 HELP (F10 or ALT_R+H ), C128 ESC ( € ) and C128 LINE FEED ( @ or ] or ALT_R+F ).
 # How to use: Within VICE-GTK Keyboard Settings: Set American (us) base host layout and load this file as either Symbolic or Positional Keyboard file at GTK VICE. 
 
 # VICE keyboard mapping file

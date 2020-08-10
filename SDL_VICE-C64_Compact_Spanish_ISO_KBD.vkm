@@ -1,6 +1,8 @@
-# C64 VICE (SDL for macOS) Positional Key Map file for Spanish-ISO Macbook (= Small Apple Magic) Keyboards by Ruben Aparicio.
+# C64 VICE SDL Positional Key Map file for Compact Spanish-ISO Keyboards (Laptops, Macbooks, Small Apple Magic Keyboards and other compact keyboards).
+# Tested in macOS. Not tested but should work in other VICE SDL distributions. It DOES NOT work in GTK distributions (Check other files in the repository).
+# Keymap File created by Ruben Aparicio (@raparici).
 # This file maps all C64 keys, including Home (F12) and Restore (F11).
-# Set American (us) base layout and load as either Symbolic or Positional Keyboard file at VICE.
+# How to use: Within VICE-SDL Keyboard Settings: Set American (us) base host layout and load this file as either Symbolic or Positional Keyboard file at SDL VICE. 
 
 # VICE keyboard mapping file
 #
@@ -177,3 +179,4 @@
 303 6 4 4              /*  Right Shift -> Right Shift  */
 304 1 7 2              /*   Left Shift -> Left Shift   */
 306 7 5 8              /*    Left Ctrl -> CBM          */
+

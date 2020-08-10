@@ -1,8 +1,9 @@
-# C128 VICE (SDL for macOS) Positional Key Map file for Spanish-ISO Macbook (= Small Apple Magic) Keyboards by Ruben Aparicio.
-# This file maps most C128 keys, including Home (F12) and Restore (F11).
-# This file is like the C64 one sacrifying Pound Key for C128 specific No Scrol and Left Arrow for C128 specific 40/80 Cols
-# (Missing: C64: Pound, Left Flag, and C128: TAB, CAPS, HELP, ESC, LINE FEED; as no more keys are available).
-# Set American (us) base layout and load as either Symbolic or Positional Keyboard file at VICE.
+# C128 VICE SDL Positional Key Map file for Compact Spanish-ISO Keyboards (Laptops, Macbooks, Small Apple Magic Keyboards and other compact keyboards).
+# Tested in macOS. Not tested but should work in other VICE SDL distributions. It DOES NOT work in GTK distributions (Check other files in the repository).
+# Keymap File created by Ruben Aparicio (@raparici).
+# This file maps all C64 keys except Pound and Left Arrow, and most C128 keys, including Home (F12), Restore (F11), No SCROL ( < ), 40/80 cols ( º ), HELP ( F10, change SDL Menu to Alt_L ) and TAB ( Alt_R ).
+# (Missing: C64: Pound, Left Flag, and C128: ALT, ESC and LINE FEED; as no more keys are available in the compact spanish iso keyboard).
+# How to use: Within VICE-SDL Keyboard Settings: Set American (us) base host layout and load this file as either Symbolic or Positional Keyboard file at SDL VICE. This keymap requires to change the SDL Menu key to Alt Left as F10 is used for C128 HELP Key.
 
 # VICE keyboard mapping file
 #
@@ -119,7 +120,7 @@
 57 4 0 8               /*            9 -> 9            */
 
 #60 7 1 8               /*            º -> Left Arrow   */ SACRIFIED
-60 -4 0                /*            º -> 40/80Cols   */
+60 -4 0                /*            º -> C128 40/80Cols   */
 
 96 5 6 8               /*            ` -> @			   */
 97 1 2 8               /*            A -> A            */
@@ -152,7 +153,7 @@
 161 5 3 8               /*        	¡ -> Minus        */
 180 6 2 8               /*          ´ -> ;            */
 #186 6 0 8              /*            < -> Pound        */ SACRIFIED
-186 10 7 8              /*            < -> NO SCROL       */ 
+186 10 7 8              /*            < -> C128 NO SCROL       */ 
 231 6 5 8               /*           ç -> =			   */
 241 5 5 8              /*            ñ -> :            */
 
@@ -170,8 +171,8 @@
 288 0 3 8              /*           F7 -> F7           */
 289 0 3 1              /*           F8 -> F8           */
 
-290 6 6 8              /*          F9 -> Up Arrow     */
-# 291 6 3 8				/* NOTHING CAN BE ASSIGNED AT F10 AS THIS INVOKES THE MENU IN SDL DISTRIBUTION */
+290 6 6 8              	/*          F9 -> Up Arrow     */
+291 8 0 8				/* F10 -> C128 HELP, SDL Menu should be configured to Left Alt/Option key instead */
 293 6 3 8				/*         F12 -> CLR/HOME     */
 
 # Restore key mapping
@@ -181,6 +182,16 @@
 303 6 4 4              /*  Right Shift -> Right Shift  */
 304 1 7 2              /*   Left Shift -> Left Shift   */
 306 7 5 8              /*    Left Ctrl -> CBM          */
+
+# C128 SPECIAL KEYS LIST, SOME MAPPED HERE OTHER ELSEWHERE IN THIS FILE: (CAPS ARE IN THE VICE BASE TEMPLATE ALREADY)
+# -4 0 	/* √ C128 40-80 COLS -> MAPPED AS º								*/
+# -4 1 	/* C128 CAPS -> NOT MAPPED BUT REDUNDANT						*/
+# 8 0 8 /* √ C128 HELP -> MAPPED AS F10				 					*/
+307 8 3 8 /* √ C128 TAB -> MAPPED AT RIGHT ALT KEY		 				*/
+# 9 0 8 /* C128 ESCAPE -> NOT MAPPED									*/
+# 9 3 8 /* C128 LINE FEED -> NOT MAPPED									*/
+# 10 0 8 /* C128 ALT -> NOT MAPPED										*/
+# 10 7 8 /*	√ C128 NO SCROL -> IMPLEMENTED AS <							*/
 
 # Joyport attached keypad key mappings
 
